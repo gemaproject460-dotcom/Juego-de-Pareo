@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GEMA | Juego de Pareo</title>
+
+<link rel="stylesheet" href="matchcss.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="fondo">
+
+    <div class="contenedor">
+
+        <header>
+
+            <h1> Juego de Pareo de Emergencias </h1>
+
+            <p>
+                Arrastra cada respuesta al lugar correcto.
+            </p>
+
+        </header>
+
+        <section class="panelSuperior">
+
+            <div class="cronometro">
+
+                <span> Tiempo</span>
+
+                <div id="timer">
+                    01:00
+                </div>
+
+            </div>
+
+            <div class="mascotaBox">
+
+                <img src="mascota.png" class="mascota">
+
+                <div id="msg">
+
+                    <h1>¡Relaciona correctamente todas las emergencias!</h1>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="nivel">
+
+            <h2 id="nivelTitulo">
+
+                Nivel 1: Emergencia → Institución
+
+            </h2>
+
+        </section>
+
+        <section class="juego">
+
+            <div class="columna">
+
+                <h3>Emergencias</h3>
+
+                <div id="izq"></div>
+
+            </div>
+
+            <div class="columna">
+
+                <h3>Respuestas</h3>
+
+                <div id="der"></div>
+
+            </div>
+
+        </section>
+
+        <div class="botones">
+
+            <button class="btn verificar" onclick="verificar()">
+
+                ✔ Verificar
+
+            </button>
+
+            <button class="btn reiniciar" onclick="location.reload()">
+
+                 Reiniciar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+    <div class="ventana">
+
+        <img src="mascota.png" class="mascotaGrande">
+
+        <div class="contenidoModal">
+
+            <h2>Resultado</h2>
+
+            <div id="resultado"></div>
+
+            <h3 id="mensajeFinal"></h3>
+
+            <button class="btn continuar" onclick="cerrarModal()">
+
+                Continuar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
